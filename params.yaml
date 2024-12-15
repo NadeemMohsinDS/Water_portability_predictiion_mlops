@@ -1,0 +1,5 @@
+data_collecton:
+    test_size : 20
+
+model_traning:
+    n_estimaters : 100

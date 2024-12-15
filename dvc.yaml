@@ -1,0 +1,23 @@
+stages:
+  data_collection:
+    cmd: python src/data_collection.py
+    deps:
+    - src/data_collection.py
+    params:
+    - data_collecton.test_size
+    outs:
+    - data/raw
+  data_preparation:
+    cmd: python src/data_prep.py
+    deps:
+    - data/raw
+    - src/data_prep.py
+    outs:
+    - src/processed
+  model_training:
+    cmd: python model_train.py
+    deps:
+    - data/processed
+    - src/model_train
+    outs:
+    - model.pkl

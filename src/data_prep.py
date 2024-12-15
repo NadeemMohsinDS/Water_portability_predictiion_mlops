@@ -23,8 +23,8 @@ def main():
     test_path=r"D:\Water_portability\mlops_wa_pre\data\raw\test.csv"
     train_path=r"D:\Water_portability\mlops_wa_pre\data\raw\train.csv"
 
-    proc_data_path=os.path.join('data','processed')
-    #os.makedirs(proc_data_path)
+    proc_data_path="./data/processed"
+    os.makedirs(proc_data_path)
 
     test_load=load_data(test_path)
     train_load=load_data(train_path)
